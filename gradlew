@@ -119,9 +119,9 @@ if [ ! -f "$WRAPPER_JAR" ]; then
     echo "gradle-wrapper.jar is missing. Bootstrapping wrapper jar..." >&2
     mkdir -p "$APP_HOME/gradle/wrapper"
     if command -v curl >/dev/null 2>&1; then
-        curl -fsSL "https://raw.githubusercontent.com/gradle/gradle/v8.7.0/gradle/wrapper/gradle-wrapper.jar" -o "$WRAPPER_JAR"
+        curl -fsSL "https://raw.githubusercontent.com/gradle/gradle/v8.7/gradle/wrapper/gradle-wrapper.jar" -o "$WRAPPER_JAR"
     elif command -v wget >/dev/null 2>&1; then
-        wget -q "https://raw.githubusercontent.com/gradle/gradle/v8.7.0/gradle/wrapper/gradle-wrapper.jar" -O "$WRAPPER_JAR"
+        wget -q "https://raw.githubusercontent.com/gradle/gradle/v8.7/gradle/wrapper/gradle-wrapper.jar" -O "$WRAPPER_JAR"
     else
         echo "Cannot bootstrap wrapper jar: neither curl nor wget is available." >&2
         exit 1

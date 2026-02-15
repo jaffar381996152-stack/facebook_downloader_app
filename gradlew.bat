@@ -74,7 +74,7 @@ set WRAPPER_JAR=%APP_HOME%\gradle\wrapper\gradle-wrapper.jar
 if not exist "%WRAPPER_JAR%" (
   echo gradle-wrapper.jar is missing. Bootstrapping wrapper jar... 1>&2
   if not exist "%APP_HOME%\gradle\wrapper" mkdir "%APP_HOME%\gradle\wrapper"
-  powershell -NoProfile -ExecutionPolicy Bypass -Command "[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12; Invoke-WebRequest -UseBasicParsing -Uri 'https://raw.githubusercontent.com/gradle/gradle/v8.7.0/gradle/wrapper/gradle-wrapper.jar' -OutFile '%WRAPPER_JAR%'"
+  powershell -NoProfile -ExecutionPolicy Bypass -Command "[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12; Invoke-WebRequest -UseBasicParsing -Uri 'https://raw.githubusercontent.com/gradle/gradle/v8.7/gradle/wrapper/gradle-wrapper.jar' -OutFile '%WRAPPER_JAR%'"
   if errorlevel 1 goto fail
 )
 
